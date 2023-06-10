@@ -81,7 +81,7 @@ class Effect {
     this.mouse = {
       x: 0,
       y: 0,
-      pressed: false,
+      pressed: true,
       radius: 150,
     };
 
@@ -94,27 +94,27 @@ class Effect {
     });
 
     window.addEventListener("mousemove", (e) => {
-      if (this.mouse.pressed) {
-        this.mouse.x = e.x;
-        this.mouse.y = e.y;
-      }
+      // if (this.mouse.pressed) {
+      // }
+      this.mouse.x = e.x;
+      this.mouse.y = e.y;
     });
 
     window.addEventListener("mouseover", (e) => {
-      this.mouse.pressed = true;
+      //this.mouse.pressed = true;
       this.mouse.x = e.x;
       this.mouse.y = e.y;
     });
 
     window.addEventListener("mousedown", (e) => {
-      this.mouse.pressed = true;
+      //this.mouse.pressed = true;
       this.mouse.x = e.x;
       this.mouse.y = e.y;
     });
 
-    window.addEventListener("mouseup", (e) => {
-      this.mouse.pressed = false;
-    });
+    // window.addEventListener("mouseup", (e) => {
+    //   this.mouse.pressed = false;
+    // });
   }
 
   createParticles() {
